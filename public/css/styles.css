@@ -1,0 +1,55 @@
+/* Custom CSS for styling the navbar */
+.navbar {
+    background-color: rgb(75, 223, 75) !important; /* Override Bootstrap's default background color */
+}
+
+
+.navbar-nav .nav-link {
+    color: white !important; /* Override Bootstrap's default text color */
+}
+
+.navbar-brand {
+    font-weight: bold;
+}
+
+.nav-item {
+    display: inline-block; /* Öğeleri yan yana yerleştirir */
+}
+
+.nav-item:nth-last-child(-n+2) {
+    float: right; /* Son iki öğeyi sağa yaslar */
+}
+
+.slogan {
+    padding: 3rem 0;
+    margin-bottom: 0;
+    background-color: #ffff;
+    background-image: url('path/to/your/image.jpg'); /* Resmin yolunu belirtin */
+    background-size: cover; /* Resmin tam olarak kaplamasını sağlar */
+    background-position: center; /* Resmin merkezde olmasını sağlar */
+    text-align: center;
+}
+
+.container {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.slogan-text {
+    font-size: 1.5rem !important; /* Yazı boyutu */
+    font-style: italic; /* Eğik yazı */
+    font-weight: 500; /* Kalın */
+    font-family: Arial, Helvetica, sans-serif; /* Font ailesi */
+    color: #0f0f0f; /* Yeşil renk */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Gölgelendirme */
+}
+
+/* İstediğiniz gibi ayarlayabileceğiniz özelleştirilmiş stiller */
+.row.g-4 [class^="col"] {
+    padding-right: 15px; /* Sağ kenar boşluğu */
+    padding-left: 70px; /* Sol kenar boşluğu */
+}
+
+.row.g-4 [class^="col"]:last-child {
+    margin-bottom: 20px; /* Son kartın alt boşluğu */
+}

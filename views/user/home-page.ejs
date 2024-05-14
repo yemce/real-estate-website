@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/navbar') %>
+<div class="slogan">
+    <div class="container">
+        <h1 class="slogan-text">Hayalinizdeki evi bulmanın en kolay yolu</h1>
+    </div>
+</div>
+
+<div class="container">
+    <form class="d-flex mt-3">
+        <input class="form-control me-2" type="search" placeholder="Ara" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Ara</button>
+    </form>
+</div>
+<br/>
+<div class="row g-4">
+    <div class="col-md-4">
+        <%- include('../partials/card') %>
+    </div>
+    <div class="col-md-4">
+        <%- include('../partials/card') %>
+    </div>
+    <div class="col-md-4">
+        <%- include('../partials/card') %>
+    </div>
+</div>
+
+
+</body>
+</html>
