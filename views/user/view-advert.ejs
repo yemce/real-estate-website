@@ -2,7 +2,63 @@
 <html lang="en">
 <%- include('../partials/head') %>
 <body>
-    <p>
-        İlana Gözat
-    </p>
+<%- include('../partials/navbar') %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="https://prefabrikevim.b-cdn.net/wp-content/uploads/2018/10/55m2-prefabrik-ev-1-cizgisiz.jpg" class="card-img-top" class="d-block w-100" alt="Ev Fotoğrafı 1">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="ev2.jpg" class="d-block w-100" alt="Ev Fotoğrafı 2">
+                    </div>
+                    <!-- Diğer fotoğrafları ekleyin -->
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+            <div class="container mt-3">
+                <h4><%= data.title %></h4>
+                <p><%= data.explain %></p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="container mt-3">
+                <h2>Özellikler</h2>
+                <ul class="list-group">
+                    <li class="list-group-item"><%= data.title %></li>
+                    <li class="list-group-item">Açıklama: <%= data.explain %></li>
+                    <li class="list-group-item">Fiyat: <%= data.price %></li>
+                    <li class="list-group-item">Telefon: </li>
+                    <li class="list-group-item">Şehir: <%= data.city %></li>
+                    <li class="list-group-item">Durum: </li>
+                    <li class="list-group-item">Metrekare: </li>
+                    <li class="list-group-item">Oda Sayısı: </li>
+                    <li class="list-group-item">Kat: </li>
+                    <li class="list-group-item">Eşya Durumu: </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Ek CSS -->
+<style>
+    #carouselExampleControls .carousel-inner img {
+        width: 100%;
+        height: 300px; /* veya istediğiniz boyutu belirleyin */
+        object-fit: cover;
+    }
+</style>
+
 </body>
+</html>

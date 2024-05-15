@@ -11,7 +11,7 @@ exports.list_advert= (req,res,next)=>{
 
 exports.view_advert= (req,res,next)=>{
      //console.log(req.params.id);
-     const oldData=data.find(x=>x.noticeid==req.params.id);
+     const oldData=data.find(x=>x.id==req.params.id);
      //console.log(oldData);
      res.render("user/view-advert",{pageTitle:"İlan Başlığı",
                                  data:oldData

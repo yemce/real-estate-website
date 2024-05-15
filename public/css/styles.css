@@ -1,6 +1,6 @@
 /* Custom CSS for styling the navbar */
 .navbar {
-    background-color: rgb(75, 223, 75) !important; /* Override Bootstrap's default background color */
+    background-color: rgb(26, 26, 26) !important; /* Override Bootstrap's default background color */
 }
 
 
@@ -10,6 +10,7 @@
 
 .navbar-brand {
     font-weight: bold;
+    color: white !important; /* Override Bootstrap;
 }
 
 .nav-item {
@@ -74,14 +75,14 @@
   margin-left: 50px; /* Sağdan boşluk */
   margin-right: 50px; /* Soldan boşluk */
   background-color: white; /* Arka plan rengi */
-  color: rgb(75, 223, 75); /* Metin rengi */
+  color: rgb(86, 156, 86); /* Metin rengi */
   padding: 20px; /* Container iç boşluk */
   max-width: 500px; /* Maksimum genişlik */
   margin: auto; /* Ortala */
-  border: 2px solid rgb(75, 223, 75); /* Yeşil kenarlık */
+  border: 2px solid rgb(86, 156, 86); /* Yeşil kenarlık */
   border-radius: 10px; /* Kenar yuvarlatma */
 }
 
 .form-label {
-    color: rgb(75, 223, 75); /* Yeşil metin rengi */
+    color: rgb(86, 156, 86); /* Yeşil metin rengi */
 }

@@ -2,7 +2,7 @@ const data = [
     {
         id:"1",
         title:"Samsun Atakum Sahilde Daire",
-        explain:"Deniz manzaralı ",
+        explain:"Deniz manzaralı, tramvaya yürüme mesafesi(koşarak 10 dk)",
         price:"111 ",
         image:" ",
         phone:" ",
