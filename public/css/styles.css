@@ -44,12 +44,28 @@
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Gölgelendirme */
 }
 
-/* İstediğiniz gibi ayarlayabileceğiniz özelleştirilmiş stiller */
-.row.g-4 [class^="col"] {
-    padding-right: 15px; /* Sağ kenar boşluğu */
-    padding-left: 70px; /* Sol kenar boşluğu */
+.card {
+  width: 18rem;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
-.row.g-4 [class^="col"]:last-child {
-    margin-bottom: 20px; /* Son kartın alt boşluğu */
+.card-img-top {
+  height: 200px; /* Kartın resim yüksekliği */
+  object-fit: cover; /* Resmin kart boyutuna göre oranlanması */
+}
+
+.card-body {
+  height: 200px; /* Kartın içeriğinin yüksekliği */
+  overflow: hidden; /* İçerik taşma durumunda gizleme */
+}
+
+.card-title,
+.card-text,
+.list-group-item,
+.btn {
+  white-space: nowrap; /* İçerik uzunluğuna göre satır sonu işareti eklenmesin */
+  overflow: hidden; /* İçerik taşma durumunda gizleme */
+  text-overflow: ellipsis; /* İçerik taşma durumunda ... görüntüleme */
+  font-size: 14px;
 }

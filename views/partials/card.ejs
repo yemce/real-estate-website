@@ -1,8 +1,16 @@
-<div class="card" style="width: 18rem; margin-left: 10px;">
+<!-- card.ejs -->
+<% data.forEach((element) => { %>
+  <div class="card" style="width: 18rem; margin-top: 10px;margin-left: 10px;">
     <img src="https://prefabrikevim.b-cdn.net/wp-content/uploads/2018/10/55m2-prefabrik-ev-1-cizgisiz.jpg" class="card-img-top" alt="Photo">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class="card-title"><%= element.title %></h5>
+      <p class="card-text"><%= element.explain %></p>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Price: <%= element.price %></li>
+        <li class="list-group-item">City: <%= element.city %></li>
+      </ul>
+      <a href="/user/list/advert/<%= element.id %>" class="btn btn-primary">İncele</a>
     </div>
   </div>
+  <% }) %>
+  
