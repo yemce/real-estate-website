@@ -38,7 +38,7 @@
 .slogan-text {
     font-size: 1.5rem !important; /* Yazı boyutu */
     font-style: italic; /* Eğik yazı */
-    font-weight: 500; /* Kalın */
+    font-weight: 700; /* Kalın */
     font-family: Arial, Helvetica, sans-serif; /* Font ailesi */
     color: #0f0f0f; /* Yeşil renk */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Gölgelendirme */
@@ -68,4 +68,20 @@
   overflow: hidden; /* İçerik taşma durumunda gizleme */
   text-overflow: ellipsis; /* İçerik taşma durumunda ... görüntüleme */
   font-size: 14px;
+}
+
+.login-container {
+  margin-left: 50px; /* Sağdan boşluk */
+  margin-right: 50px; /* Soldan boşluk */
+  background-color: white; /* Arka plan rengi */
+  color: rgb(75, 223, 75); /* Metin rengi */
+  padding: 20px; /* Container iç boşluk */
+  max-width: 500px; /* Maksimum genişlik */
+  margin: auto; /* Ortala */
+  border: 2px solid rgb(75, 223, 75); /* Yeşil kenarlık */
+  border-radius: 10px; /* Kenar yuvarlatma */
+}
+
+.form-label {
+    color: rgb(75, 223, 75); /* Yeşil metin rengi */
 }
