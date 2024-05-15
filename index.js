@@ -16,8 +16,10 @@ app.use((req,res,next)=>{
 
 const adminRouter = require("./routes/admin")
 const userRouter = require("./routes/user")
+const authRouter=require("./routes/auth");
 app.use("/admin",adminRouter);
 app.use("/user",userRouter);
+app.use("/auth",authRouter);
 
 
 // error handling
