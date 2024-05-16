@@ -18,7 +18,30 @@ exports.view_advert= (req,res,next)=>{
                              });
 }
 
-exports.add_advert= (req,res,next)=>{
-    res.send("ilan ekleme sayfası",{pageTitle:"İlan Ver"});
+exports.get_addAdvert= (req,res,next)=>{
+    res.render("user/add-advert",{pageTitle:"İlan Ekle "})
 }
 
+exports.post_addAdvert = (req, res, next) => {
+    const body = req.body;
+
+    const newdata = {
+        id: data.length + 1,
+    title: body.title || "",
+    explain: body.explain || "",
+    price: body.price || "",
+    image: body.image || "", // Eğer resim verisi yoksa boş bir dize olarak atanacak
+    phone: body.phone || "", // Eğer telefon verisi yoksa boş bir dize olarak atanacak
+    city: body.city || "",
+    status: body.status || "", // Eğer durum verisi yoksa boş bir dize olarak atanacak
+    meters: body.meters || "", // Eğer metre kare verisi yoksa boş bir dize olarak atanacak
+    rooms: body.rooms || "", // Eğer oda sayısı verisi yoksa boş bir dize olarak atanacak
+    floor: body.floor || "", // Eğer kat verisi yoksa boş bir dize olarak atanacak
+    furniture: body.furniture || "", 
+    };
+
+    data.push(newdata);
+
+    // İlan oluşturulduktan sonra /user/list/advert URL'sine yönlendirme
+    res.redirect("/user/list/advert");
+};

@@ -75,14 +75,14 @@
   margin-left: 50px; /* Sağdan boşluk */
   margin-right: 50px; /* Soldan boşluk */
   background-color: white; /* Arka plan rengi */
-  color: rgb(86, 156, 86); /* Metin rengi */
+  color: rgb(26, 26, 26); /* Metin rengi */
   padding: 20px; /* Container iç boşluk */
   max-width: 500px; /* Maksimum genişlik */
   margin: auto; /* Ortala */
-  border: 2px solid rgb(86, 156, 86); /* Yeşil kenarlık */
+  border: 2px solid rgb(26, 26, 26); /* Yeşil kenarlık */
   border-radius: 10px; /* Kenar yuvarlatma */
 }
 
 .form-label {
-    color: rgb(86, 156, 86); /* Yeşil metin rengi */
+    color: rgb(26, 26, 26); /* Yeşil metin rengi */
 }

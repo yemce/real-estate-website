@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head') %>
+<body>
+<%- include('../partials/navbar') %>
+
+<div class="container mt-5">
+    <h1 class="mb-4">İlan Oluştur</h1>
+    
+   
+    <!-- Ev Özellikleri Giriş Alanı -->
+    <form method="post">
+        <div class="mb-3">
+            <label for="title" class="form-label">Başlık</label>
+            <input type="text" class="form-control" id="title" name="title">
+        </div>
+        <div class="mb-3">
+            <label for="explain" class="form-label">Açıklama</label>
+            <textarea class="form-control" id="explain" rows="3" name="explain"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Fiyat</label>
+            <input type="number" class="form-control" id="price" name="price">
+        </div>
+        <div class="mb-3">
+            <label for="city" class="form-label">Şehir</label>
+            <input type="text" class="form-control" id="city" name="city">
+        </div>
+        
+         <!-- Ev Fotoğrafları Yükleme Alanı -->
+ <div class="mb-4">
+    <label for="photoUpload" class="form-label">Fotoğraf Ekle</label>
+    <input type="file" class="form-control visually-hidden" id="photoUpload" accept="image/*">
+    <label for="photoUpload" class="btn btn-primary">Seç</label>
+    <div id="photoPreview" class="mt-2"></div>
+</div>
+
+        <button type="submit" class="btn btn-primary">İlanı Oluştur</button>
+    </form>
+</div>
+
+
+<script>
+    // Seçilen fotoğrafları önizleme olarak gösterme
+    const photoUpload = document.getElementById('photoUpload');
+    const photoPreview = document.getElementById('photoPreview');
+
+    photoUpload.addEventListener('change', function() {
+        for (let i = 0; i < this.files.length; i++) {
+            const file = this.files[i];
+
+            if (!file.type.startsWith('image/')) continue;
+
+            const img = document.createElement('img');
+            img.classList.add('img-thumbnail');
+            img.classList.add('me-2');
+            img.width = 100;
+            img.height = 100;
+            img.src = URL.createObjectURL(file);
+
+            photoPreview.appendChild(img);
+        }
+        this.value = ''; // Seçilen dosyayı temizle
+    });
+</script>
+
+</body>

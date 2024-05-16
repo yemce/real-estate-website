@@ -1,8 +1,13 @@
 const express = require("express");
 const path = require('path');
+const bodyParser = require('body-parser')
+
+
 const app = express();
 
+
 app.set('view engine', 'ejs');
+app.use(bodyParser.urlencoded({ extended: true })); //extend:true->enabled json
 
 //Static
 app.use('/static', express.static(path.join(__dirname, 'public')));
