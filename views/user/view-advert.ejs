@@ -27,24 +27,35 @@
                 </button>
             </div>
             <div class="container mt-3">
-                <h4><%= data.title %></h4>
-                <p><%= data.explain %></p>
+                <% if (data) { %>
+                    <!-- data nesnesi varsa, içeriğine erişilebilir -->
+                    <h4><%= data.title %></h4>
+                    <p><%= data.explain %></p>
+                <% } else { %>
+                    <!-- data nesnesi yoksa veya boşsa uygun bir mesaj görüntüleyin -->
+                    <p>Veri bulunamadı.</p>
+                <% } %>
             </div>
         </div>
         <div class="col-md-6">
             <div class="container mt-3">
                 <h2>Özellikler</h2>
                 <ul class="list-group">
-                    <li class="list-group-item"><%= data.title %></li>
-                    <li class="list-group-item">Açıklama: <%= data.explain %></li>
-                    <li class="list-group-item">Fiyat: <%= data.price %></li>
-                    <li class="list-group-item">Telefon: </li>
-                    <li class="list-group-item">Şehir: <%= data.city %></li>
-                    <li class="list-group-item">Durum: </li>
-                    <li class="list-group-item">Metrekare: </li>
-                    <li class="list-group-item">Oda Sayısı: </li>
-                    <li class="list-group-item">Kat: </li>
-                    <li class="list-group-item">Eşya Durumu: </li>
+                    <% if (data && data.title) { %>
+                        <li class="list-group-item"><%= data.title %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Başlık bulunamadı</li>
+                    <% } %>
+                    
+                    <li class="list-group-item">Açıklama: <%= data.explain ? data.explain : "Açıklama bulunamadı" %></li>
+                    <li class="list-group-item">Fiyat: <%= data.price ? data.price : "Fiyat bilgisi bulunamadı" %></li>
+                    <li class="list-group-item">Telefon: <%= data.phone ? data.phone : "Telefon bilgisi bulunamadı" %></li>
+                    <li class="list-group-item">Şehir: <%= data.city ? data.city : "Şehir bilgisi bulunamadı" %></li>
+                    <li class="list-group-item">Durum: <%= data.status ? data.status : "Durum bilgisi bulunamadı" %></li>
+                    <li class="list-group-item">Metrekare: <%= data.meters ? data.meters : "Metrekare bilgisi bulunamadı" %></li>
+                    <li class="list-group-item">Oda Sayısı: <%= data.rooms ? data.rooms : "Oda sayısı bilgisi bulunamadı" %></li>
+                    <li class="list-group-item">Kat: <%= data.floor ? data.floor : "Kat bilgisi bulunamadı" %></li>
+                    <li class="list-group-item">Eşya Durumu: <%= data.furniture ? data.furniture : "Eşya durumu bilgisi bulunamadı" %></li>                    
                 </ul>
             </div>
         </div>
