@@ -46,16 +46,51 @@
                     <% } else { %>
                         <li class="list-group-item">Başlık bulunamadı</li>
                     <% } %>
-                    
-                    <li class="list-group-item">Açıklama: <%= data.explain ? data.explain : "Açıklama bulunamadı" %></li>
-                    <li class="list-group-item">Fiyat: <%= data.price ? data.price : "Fiyat bilgisi bulunamadı" %></li>
-                    <li class="list-group-item">Telefon: <%= data.phone ? data.phone : "Telefon bilgisi bulunamadı" %></li>
-                    <li class="list-group-item">Şehir: <%= data.city ? data.city : "Şehir bilgisi bulunamadı" %></li>
-                    <li class="list-group-item">Durum: <%= data.status ? data.status : "Durum bilgisi bulunamadı" %></li>
-                    <li class="list-group-item">Metrekare: <%= data.meters ? data.meters : "Metrekare bilgisi bulunamadı" %></li>
-                    <li class="list-group-item">Oda Sayısı: <%= data.rooms ? data.rooms : "Oda sayısı bilgisi bulunamadı" %></li>
-                    <li class="list-group-item">Kat: <%= data.floor ? data.floor : "Kat bilgisi bulunamadı" %></li>
-                    <li class="list-group-item">Eşya Durumu: <%= data.furniture ? data.furniture : "Eşya durumu bilgisi bulunamadı" %></li>                    
+                    <% if (data && data.explain) { %>
+                        <li class="list-group-item">Açıklama: <%= data.explain %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Açıklama bulunamadı</li>
+                    <% } %>
+                    <% if (data && data.price) { %>
+                        <li class="list-group-item">Fiyat: <%= data.price %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Fiyat bulunamadı</li>
+                    <% } %>
+                    <% if (data && data.phone) { %>
+                        <li class="list-group-item">Telefon: <%= data.phone %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Telefon bulunamadı</li>
+                    <% } %>
+                    <% if (data && data.city) { %>
+                        <li class="list-group-item">Şehir: <%= data.city %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Şehir bulunamadı</li>
+                    <% } %>
+                    <% if (data && data.condition) { %>
+                        <li class="list-group-item">Durum: <%= data.condition %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Durum bulunamadı</li>
+                    <% } %>
+                    <% if (data && data.squareMeter) { %>
+                        <li class="list-group-item">Metrekare: <%= data.squareMeter %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Metrekare bilgisi bulunamadı</li>
+                    <% } %>
+                    <% if (data && data.roomCount) { %>
+                        <li class="list-group-item">Oda Sayısı: <%= data.roomCount %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Oda Sayısı bilgisi bulunamadı</li>
+                    <% } %>
+                    <% if (data && data.floor) { %>
+                        <li class="list-group-item">Kat: <%= data.floor %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Kat bilgisi bulunamadı</li>
+                    <% } %>
+                    <% if (data && data.furnitureCondition) { %>
+                        <li class="list-group-item">Eşya Durumu: <%= data.furnitureCondition %></li>
+                    <% } else { %>
+                        <li class="list-group-item">Eşya Durumu bilgisi bulunamadı</li>
+                    <% } %>
                 </ul>
             </div>
         </div>
